@@ -43,11 +43,22 @@ header {
     display: inline;
 }
 
+article {
+    scroll-margin-top: 80px;
+}
+
+article section {
+    scroll-margin-top: 80px;
+}
+
 .profile header {
     text-align: center;
 }
 
 .profile img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 200px;
 }
 
@@ -61,7 +72,10 @@ header {
 .card {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     border-radius: 5px;
-    padding: 60px 45px;
+    padding-top: 10px;
+    padding-right: 45px;
+    padding-left: 45px;
+    padding-bottom: 30px;
     margin-top: 20px;
 }
 
@@ -85,6 +99,7 @@ nav li {
     list-style-type: none;
     margin-right: 20px;
 }
+
 nav ul {
     display: flex;
 }
@@ -168,6 +183,7 @@ aside {
     display: none;
     transition: 0.2s;
     z-index: 1;
+    overflow: auto;
 }
 
 .menu a {
@@ -186,7 +202,8 @@ aside {
 }
 
 .menu-open {
-    display: block;
+    display: flex;
+    flex-direction: column;
     opacity: 1;
 }
 
