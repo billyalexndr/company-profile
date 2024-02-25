@@ -85,6 +85,9 @@ nav li {
     list-style-type: none;
     margin-right: 20px;
 }
+nav ul {
+    display: flex;
+}
 
 #content {
     float: left;
@@ -102,6 +105,18 @@ aside {
 }
 
 .select {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.selected {
+    margin-right: 0.3em;
+}
+
+/* .select {
     background: tomato;
     color: #fff;
     display: flex;
@@ -112,16 +127,16 @@ aside {
     padding: 1em;
     cursor: pointer;
     transition: background 0.3s;
-}
+} */
 
-.select-clicked {
+/* .select-clicked {
     border: 2px green solid;
     box-shadow: 0 0 0.8em green;
-}
+} */
 
-.select:hover {
+/* .select:hover {
     background: aquamarine;
-}
+} */
 
 .caret {
     width: 0;
@@ -155,14 +170,14 @@ aside {
     z-index: 1;
 }
 
-.menu li {
+.menu a {
     padding: 0.7em 0.5em;
     margin: 0.3em 0;
     border-radius: 0.5em;
     cursor: pointer;
 }
 
-.menu li:hover {
+.menu a:hover {
     background: #00c8eb;
 }
 
