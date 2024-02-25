@@ -49,6 +49,23 @@ article {
 
 article section {
     scroll-margin-top: 80px;
+    padding-bottom: 20px;
+}
+
+a.button {
+    display: inline-block;
+    padding: 10px 20px;
+    text-decoration: none;
+    background-color: #4caf50; /* Warna latar belakang */
+    color: white; /* Warna teks */
+    border: 2px solid #4caf50; /* Warna border */
+    border-radius: 4px; /* Untuk sudut yang melengkung */
+    transition: background-color 0.3s, color 0.3s; /* Animasi perubahan warna saat hover */
+}
+
+a.button:hover {
+    background-color: #45a049; /* Warna latar belakang saat hover */
+    color: white; /* Warna teks saat hover */
 }
 
 .profile header {
