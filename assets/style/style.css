@@ -13,6 +13,8 @@ body {
 main {
     padding: 20px;
     overflow: auto;
+    display: flex;
+    flex-wrap: wrap;
 }
 
 h2,
@@ -56,16 +58,16 @@ a.button {
     display: inline-block;
     padding: 10px 20px;
     text-decoration: none;
-    background-color: #4caf50; /* Warna latar belakang */
-    color: white; /* Warna teks */
-    border: 2px solid #4caf50; /* Warna border */
-    border-radius: 4px; /* Untuk sudut yang melengkung */
-    transition: background-color 0.3s, color 0.3s; /* Animasi perubahan warna saat hover */
+    background-color: #4caf50;
+    color: white;
+    border: 2px solid #4caf50;
+    border-radius: 4px;
+    transition: background-color 0.3s, color 0.3s;
 }
 
 a.button:hover {
-    background-color: #45a049; /* Warna latar belakang saat hover */
-    color: white; /* Warna teks saat hover */
+    background-color: #45a049;
+    color: white;
 }
 
 .profile header {
@@ -122,13 +124,11 @@ nav ul {
 }
 
 #content {
-    float: left;
-    width: 75%;
+    flex: 1 0 75%;
 }
 
 aside {
-    float: right;
-    width: 25%;
+    flex: 1 0 25%;
     padding-left: 20px;
 }
 
@@ -147,28 +147,6 @@ aside {
 .selected {
     margin-right: 0.3em;
 }
-
-/* .select {
-    background: tomato;
-    color: #fff;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border: 2px tomato solid;
-    border-radius: 0.5em;
-    padding: 1em;
-    cursor: pointer;
-    transition: background 0.3s;
-} */
-
-/* .select-clicked {
-    border: 2px green solid;
-    box-shadow: 0 0 0.8em green;
-} */
-
-/* .select:hover {
-    background: aquamarine;
-} */
 
 .caret {
     width: 0;
@@ -225,9 +203,12 @@ aside {
 }
 
 @media screen and (max-width: 1000px) {
+    main {
+        flex-direction: column;
+    }
+
     #content,
     aside {
         width: 100%;
-        padding: 0;
     }
 }
